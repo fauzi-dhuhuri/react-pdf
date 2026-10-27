@@ -4,7 +4,7 @@ import * as P from '@react-pdf/primitives';
 import { YogaNode } from 'yoga-layout/load';
 
 import { Box, NodeProps, Origin } from './base';
-import { Image } from '@react-pdf/image';
+import { Image } from '@fauzi-dhuhuri/react-pdf-image';
 import { SourceObject } from './image';
 import { ImageNode, SafeImageNode } from './image';
 import { ViewNode, SafeViewNode } from './view';

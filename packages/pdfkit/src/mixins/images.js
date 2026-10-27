@@ -234,6 +234,7 @@ export default {
 
     if (!image) {
       image = PDFImage.open(src, `I${++this._imageCount}`);
+
       if (typeof src === 'string') {
         this._imageRegistry[src] = image;
       }

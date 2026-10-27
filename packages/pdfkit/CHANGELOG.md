@@ -1,5 +1,25 @@
 # @react-pdf/pdfkit
 
+## 5.2.0
+
+### Minor Changes
+
+- Final stable release with WebP support
+
+## 5.1.2
+
+### Minor Changes
+
+- Add webp support for PDFKit
+
+## 5.1.2
+
+### Patch Changes
+
+- d41a8207: refactor(pdfkit): replace events import in line_wrapper.js with inline emitter
+- c2da5098: refactor(pdfkit): use byte-level PNG magic check in image.js
+- 30dc2a47: refactor(pdfkit): remove Buffer dependency from EXIF orientation parser
+
 ## 5.1.1
 
 ### Patch Changes
@@ -37,7 +57,7 @@
   This allows you to break correctly on normal hyphens or other special characters in your text. For example, to use the default english-language syllable breaking built into react-pdf, but also break after hyphens naturally occurring in your text (such as is often present in hyperlinks), you could use the following hyphenation callback:
 
   ```js
-  import { Font } from "@react-pdf/renderer";
+  import { Font } from '@react-pdf/renderer';
 
   Font.registerHyphenationCallback((word, originalHyphenationCallback) => {
     return originalHyphenationCallback(word).flatMap((w) => w.split(/(?<=-)/));

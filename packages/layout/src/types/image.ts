@@ -1,7 +1,7 @@
 import { SafeStyle, Style } from '@react-pdf/stylesheet';
 import { SrcSet, Sizes } from '@react-pdf/types';
 import * as P from '@react-pdf/primitives';
-import { Image } from '@react-pdf/image';
+import { Image } from '@fauzi-dhuhuri/react-pdf-image';
 import { YogaNode } from 'yoga-layout/load';
 
 import { Box, NodeProps, Origin } from './base';
@@ -14,7 +14,7 @@ type SourceBuffer = Buffer;
 
 type SourceBlob = Blob;
 
-type SourceDataBuffer = { data: Buffer; format: 'png' | 'jpg' };
+type SourceDataBuffer = { data: Buffer; format: 'png' | 'jpg' | 'webp' };
 
 type SourceURLObject = {
   uri: string;

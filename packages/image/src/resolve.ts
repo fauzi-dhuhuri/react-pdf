@@ -5,6 +5,7 @@ import path from 'path';
 import PNG from './png';
 import JPEG from './jpeg';
 import SVG from './svg';
+import WEBP from './webp';
 import createCache from './cache.js';
 import {
   Image,
@@ -98,6 +99,7 @@ const isValidFormat = (format: string): format is ImageFormat => {
     lower === 'jpg' ||
     lower === 'jpeg' ||
     lower === 'png' ||
+    lower === 'webp' ||
     lower === 'svg' ||
     lower === 'svg+xml'
   );
@@ -112,12 +114,14 @@ const getImageFormat = (buffer: Buffer) => {
     format = 'png' as const;
   } else if (SVG.isValid(buffer)) {
     format = 'svg' as const;
+  } else if (WEBP.isValid(buffer)) {
+    format = 'webp' as const;
   }
 
   return format;
 };
 
-function getImage(body: Buffer, format: string): Image | null {
+async function getImage(body: Buffer, format: string): Promise<Image | null> {
   switch (format.toLowerCase()) {
     case 'jpg':
     case 'jpeg':
@@ -127,6 +131,9 @@ function getImage(body: Buffer, format: string): Image | null {
     case 'svg':
     case 'svg+xml':
       return new SVG(body);
+    case 'webp':
+      const image = await WEBP.create(body);
+      return image;
     default:
       return null;
   }
@@ -196,7 +203,7 @@ const resolveImageFromUrl = async (src: LocalImageSrc | RemoteImageSrc) => {
   const format = getImageFormat(data);
 
   if (!format) {
-    throw new Error('Not valid image extension');
+    throw new Error(`Not valid image extension`);
   }
 
   return getImage(data, format);

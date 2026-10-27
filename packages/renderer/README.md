@@ -20,6 +20,13 @@
   </p>
 </p>
 
+## Note
+This is my fork from [react-pdf](https://github.com/diegomura/react-pdf) repository for personal project.
+
+## Feature from my fork
+- Support webp image format.
+- Add more test coverage.
+
 ## How to install
 
 ```sh

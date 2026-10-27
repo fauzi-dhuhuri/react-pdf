@@ -1,5 +1,17 @@
 # @react-pdf/image
 
+## 3.2.0
+
+### Minor Changes
+
+- Final stable release with WebP support
+
+## 3.1.0
+
+### Minor Changes
+
+- add native webp support using @jsquash/webp assembly
+
 ## 3.1.0
 
 ### Minor Changes

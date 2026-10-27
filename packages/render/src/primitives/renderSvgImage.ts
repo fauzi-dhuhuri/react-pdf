@@ -1,4 +1,4 @@
-import { SafeImageNode } from '@react-pdf/layout';
+import { SafeImageNode } from '@fauzi-dhuhuri/react-pdf-layout';
 
 import { Context } from '../types';
 
@@ -13,8 +13,7 @@ const renderImage = (ctx: Context, node: SafeImageNode) => {
 
   if (width === 0 || height === 0) {
     console.warn(
-      `Image with src '${
-        (node.props as any).href
+      `Image with src '${(node.props as any).href
       }' skipped due to invalid dimensions`,
     );
     return;
@@ -22,18 +21,23 @@ const renderImage = (ctx: Context, node: SafeImageNode) => {
 
   if (typeof width === 'string' || typeof height === 'string') {
     console.warn(
-      `Image with src '${
-        (node.props as any).href
+      `Image with src '${(node.props as any).href
       }' skipped due to percentage width or height`,
     );
     return;
   }
 
   ctx.save();
+  const src = node.image.format === 'webp' ? node.image : node.image.data;
+
+  let embeddedImage = (typeof src === 'string' && ctx._imageRegistry[src]) || ctx.openImage(src);
+  if (!embeddedImage.obj) {
+    embeddedImage.embed(ctx);
+  }
 
   ctx
     .fillOpacity(opacity || 1)
-    .image(node.image.data, x + paddingLeft, y + paddingTop, {
+    .image(embeddedImage, x + paddingLeft, y + paddingTop, {
       width,
       height,
     });

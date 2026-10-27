@@ -6,6 +6,13 @@
 
 Image parsing and resolution library for react-pdf. Handles PNG and JPEG images from various sources including local files, remote URLs, base64 data URIs, buffers, and blobs.
 
+## Note
+This is my fork from [react-pdf](https://github.com/diegomura/react-pdf) repository for personal project.
+
+## Feature from my fork
+- Support webp image format.
+- Add more test coverage.
+
 ## Installation
 
 ```bash
@@ -21,7 +28,7 @@ const image = await resolveImage({ uri: './path/to/image.png' });
 
 console.log(image.width); // Image width in pixels
 console.log(image.height); // Image height in pixels
-console.log(image.format); // 'png' or 'jpeg'
+console.log(image.format); // 'png' or 'jpeg' or 'webp
 console.log(image.data); // Buffer containing image data
 ```
 

@@ -1,5 +1,12 @@
 # @react-pdf/types
 
+## 2.11.2
+
+### Patch Changes
+
+- @react-pdf/font@4.0.9
+- @react-pdf/stylesheet@6.2.2
+
 ## 2.11.1
 
 ### Patch Changes

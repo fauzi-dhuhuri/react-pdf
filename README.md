@@ -89,6 +89,13 @@ import ReactPDF from '@react-pdf/renderer';
 ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`);
 ```
 
+## Note
+This is my fork from [react-pdf](https://github.com/diegomura/react-pdf) repository for personal project.
+
+## Feature from my fork
+- Support webp image format.
+- Add more test coverage.
+
 ## Contributors
 
 This project exists thanks to all the people who contribute. Looking to contribute? Please check our [[contribute]](https://github.com/diegomura/react-pdf/blob/master/.github/CONTRIBUTING.md) document for more details about how to setup a development environment and submitting code.

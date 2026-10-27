@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import * as P from '@react-pdf/primitives';
-import { SvgImage } from '@react-pdf/image';
+import { SvgImage } from '@fauzi-dhuhuri/react-pdf-image';
 
 import resolveSvg, { resolveXLinks } from '../../src/steps/resolveSvg';
 import {

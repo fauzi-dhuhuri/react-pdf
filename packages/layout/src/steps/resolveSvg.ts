@@ -9,7 +9,7 @@ import {
   matchPercent,
   parseFloat,
 } from '@react-pdf/fns';
-import { SvgImage } from '@react-pdf/image';
+import { SvgImage } from '@fauzi-dhuhuri/react-pdf-image';
 
 import layoutText from '../svg/layoutText';
 import replaceDefs from '../svg/replaceDefs';

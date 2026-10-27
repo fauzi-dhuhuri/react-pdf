@@ -1,4 +1,5 @@
 {
+  "private": "true",
   "name": "@react-pdf/math",
   "version": "2.0.1",
   "license": "MIT",

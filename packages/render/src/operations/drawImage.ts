@@ -1,5 +1,5 @@
 import { isNil } from '@react-pdf/fns';
-import { Image } from '@react-pdf/image';
+import { Image } from '@fauzi-dhuhuri/react-pdf-image';
 
 import resolveObjectFit from '../utils/resolveObjectFit';
 import { Context } from '../types';
@@ -50,7 +50,7 @@ const drawImage = (ctx: Context, options: DrawImageOptions) => {
   let embeddedImage = imageCache.get(cacheKey);
 
   if (!embeddedImage) {
-    const src = image.data;
+    const src = image.format === 'webp' ? image : image.data;
 
     embeddedImage =
       (typeof src === 'string' && ctx._imageRegistry[src]) ||

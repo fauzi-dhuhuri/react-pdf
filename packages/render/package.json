@@ -1,15 +1,15 @@
 {
-  "name": "@react-pdf/render",
-  "version": "4.5.1",
+  "name": "@fauzi-dhuhuri/react-pdf-render",
+  "version": "4.7.0",
   "license": "MIT",
   "description": "A render engine for Node and the browser",
   "author": "Diego Muracciole <diegomuracciole@gmail.com>",
-  "homepage": "https://github.com/diegomura/react-pdf#readme",
+  "homepage": "https://github.com/fauzi-dhuhuri/react-pdf#readme",
   "type": "module",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/diegomura/react-pdf.git",
+    "url": "https://github.com/fauzi-dhuhuri/react-pdf.git",
     "directory": "packages/render"
   },
   "scripts": {
@@ -28,7 +28,8 @@
     "color-string": "^2.1.4",
     "normalize-svg-path": "^1.1.0",
     "parse-svg-path": "^0.1.2",
-    "svg-arc-to-cubic-bezier": "^3.2.0"
+    "svg-arc-to-cubic-bezier": "^3.2.0",
+    "@fauzi-dhuhuri/react-pdf-image": "^3.2.0"
   },
   "devDependencies": {
     "@react-pdf/layout": "^4.6.1",

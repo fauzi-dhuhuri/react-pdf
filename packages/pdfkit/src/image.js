@@ -7,9 +7,14 @@ import fs from 'fs';
 import { fromBase64 } from './binary';
 import JPEG from './image/jpeg';
 import PNG from './image/png';
+import WEBP from './image/webp';
 
 class PDFImage {
   static open(src, label) {
+    if (src && src.format === 'webp') {
+      return new WEBP(src, label);
+    }
+
     let data;
     if (Buffer.isBuffer(src)) {
       data = src;

@@ -1,5 +1,50 @@
 # @react-pdf/renderer
 
+## 4.7.0
+
+### Minor Changes
+
+- Final stable release with WebP support
+
+### Patch Changes
+
+- Updated dependencies
+  - @fauzi-dhuhuri/react-pdf-layout@4.8.0
+  - @fauzi-dhuhuri/react-pdf-pdfkit@5.2.0
+  - @fauzi-dhuhuri/react-pdf-render@4.7.0
+
+## 4.6.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @fauzi-dhuhuri/react-pdf-render@4.6.0
+
+## 4.6.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @fauzi-dhuhuri/react-pdf-pdfkit@5.2.0
+
+## 4.6.0
+
+### Minor Changes
+
+- add native webp support using @jsquash/webp assembly
+
+### Patch Changes
+
+- Updated dependencies [d41a8207]
+- Updated dependencies
+- Updated dependencies [c2da5098]
+- Updated dependencies [30dc2a47]
+  - @react-pdf/pdfkit@5.1.2
+  - @fauzi-dhuhuri/react-pdf-layout@4.7.0
+  - @react-pdf/font@4.0.9
+  - @react-pdf/types@2.11.2
+  - @react-pdf/render@4.5.2
+
 ## 4.5.1
 
 ### Patch Changes

@@ -1,4 +1,5 @@
 {
+  "private": "true",
   "name": "@react-pdf/reconciler",
   "version": "2.0.0",
   "license": "MIT",
